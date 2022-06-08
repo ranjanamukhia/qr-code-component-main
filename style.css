@@ -8,53 +8,97 @@
     
   }
 
+  *,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+  
+
 
 body{
-    background-color:var(--Light-gray);
-   
-
-}
-
-.white-card{
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 150px;
     
-    width: 325px;
-    height: 500px;
-     display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; 
-    background-color:var(--White);
-    border-radius: 10px;
-}
-
-.qrcode-image img{
-    width:300px;
-    border-radius: 5px;
-
-}
-.heading-text{
-
-    width: 280px;
-    font-family: 'Outfit', sans-serif;
-    font-weight: 700;
-    margin: 0px 20px 0px 20px;
-    padding: 0px 20px 0px 30px;
-   
-    justify-content: center;
-    align-items: center;
-}
-.paragraph-text{
-    width: 250px;
-    font-size: 15px;
-    font-family: 'Outfit', sans-serif;
+    font-family: "Outfit", sans-serif;
     font-weight: 400;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    text-justify: inter-word;
-    justify-content: center;
-    align-items: center;
+    line-height: 1;
 
 }
+main {    /* <---- Add */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(212, 45%, 89%);
+  }
+
+.container{
+    width: 30rem;
+    border-radius: 2.4rem;
+    padding: 1.6rem;
+    background-color: hsl(0, 0%, 100%);
+    text-align: center;
+}
+
+.card{
+    display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  border-radius: 1.6rem;
+}
+.qrcode-image{
+    max-width: 100%;
+  border-radius: 1rem;
+
+}
+.heading-text, .paragraph-text{
+
+    
+    padding: 0 1.2rem;
+}
+
+.heading-text{
+    font-size: 2rem;
+  font-weight: 700;
+  color: hsl(218, 44%, 22%);
+}
+
+.paragraph-text{
+    font-size: 1.5rem;
+  color: hsl(220, 15%, 55%);
+  margin-bottom: 2.4rem;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+  /* Responsive Design */
+/* screen size: 352px */
+@media (max-width: 22em) {
+    html {
+      font-size: 52.5%;
+    }
+  
+    .container {
+      width: 24rem;
+    }
+  }
+  
+  @media print {
+    body {
+      background-color: transparent;
+    }
+  }
+
