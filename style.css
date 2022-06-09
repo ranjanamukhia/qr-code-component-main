@@ -30,7 +30,7 @@ body{
     line-height: 1;
 
 }
-main {    /* <---- Add */
+main {    
     height: 100vh;
     display: flex;
     flex-direction: column;
